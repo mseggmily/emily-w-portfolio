@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("ew-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+        window.scrollTo(0, 0);
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Emily Wong | Web3 marketing, community, and partnerships. Los Angeles."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Emily Wong · Marketing &amp; Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=section-parallax" />
+  </head>
+  <body class="site-community">
+    <a class="skip-link" href="#intro">Skip to content</a>
+
+    <header class="mono-header">
+      <div class="wrap mono-header__inner">
+        <a class="mono-header__brand" href="#intro">Emily Wong</a>
+        <nav class="mono-header__nav" aria-label="Page sections">
+          <a href="#intro">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="mono-header__right">
+          <span class="mono-header__hint" aria-hidden="true"
+            ><kbd class="mono-kbd">⌘</kbd><kbd class="mono-kbd">K</kbd></span
+          >
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch theme"
+            title="Theme"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="intro" class="mono-hero section-anchor section-parallax is-revealed">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="mono-hero__orbs" aria-hidden="true">
+          <div class="mono-hero__orb mono-hero__orb--1"></div>
+          <div class="mono-hero__orb mono-hero__orb--2"></div>
+          <div class="mono-hero__orb mono-hero__orb--3"></div>
+          <div class="mono-hero__orb mono-hero__orb--4"></div>
+          <div class="mono-hero__orb mono-hero__orb--5"></div>
+        </div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-hero__avail">available for new projects</p>
+          <h1 class="mono-hero__name">Emily Wong</h1>
+          <p class="mono-hero__role">Marketing &amp; Community.</p>
+          <p class="mono-hero__tagline">
+            I build and scale communities, campaigns, and partnerships across
+            Web3, media, and consumer brands.
+          </p>
+          <div class="mono-hero__actions">
+            <a class="mono-link mono-link--primary" href="#about"
+              >about me</a
+            >
+            <a class="mono-link mono-link--primary mono-link--ghost" href="#experience"
+              >see experience</a
+            >
+            <span class="mono-hero__dot">·</span>
+            <a class="mono-link" href="#contact">get in touch →</a>
+            <a
+              class="mono-link"
+              href="https://www.linkedin.com/in/mseggmily"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="motion" class="motion-band section-anchor section-parallax" aria-label="Highlights">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="motion-band__inner section-parallax__content">
+          <div class="motion-band__grid" aria-hidden="true"></div>
+          <div class="motion-band__marquee motion-band__marquee--fwd" aria-hidden="true">
+            <div class="motion-band__track">
+              <span>community building</span><span>campaigns</span><span>partnerships</span><span>Web3</span><span>content strategy</span><span>brand voice</span><span>activations</span><span>growth</span>
+              <span>community building</span><span>campaigns</span><span>partnerships</span><span>Web3</span><span>content strategy</span><span>brand voice</span><span>activations</span><span>growth</span>
+            </div>
+          </div>
+          <div class="motion-band__marquee motion-band__marquee--rev" aria-hidden="true">
+            <div class="motion-band__track">
+              <span>Discord</span><span>social</span><span>BD</span><span>email</span><span>events</span><span>vibe coding</span><span>multi-channel</span><span>KPIs</span>
+              <span>Discord</span><span>social</span><span>BD</span><span>email</span><span>events</span><span>vibe coding</span><span>multi-channel</span><span>KPIs</span>
+            </div>
+          </div>
+          <p class="motion-band__tagline">Building communities that stick.</p>
+        </div>
+      </section>
+
+      <section id="about" class="mono-section section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-section__index">About</p>
+          <h2 class="mono-section__title">My Journey</h2>
+
+          <div class="mono-about__grid">
+            <div class="mono-about__copy">
+              <p>
+                My career spans experiential growth marketing, Web3 community
+                building, and brand partnerships. I've led multi-channel campaigns
+                with five and six figure budgets, grown communities from zero,
+                and turned partnership programs into measurable revenue drivers.
+              </p>
+              <p>
+                I care about the space between strategy and execution: writing the
+                plan, running the activations, and staying in the community channels
+                to see what actually lands. Whether it's launching a Discord server,
+                coordinating a brand collaboration, or building a content pipeline,
+                I like being close to the work.
+              </p>
+            </div>
+            <figure class="mono-about__photo">
+              <div class="mono-hero__frame">
+                <img
+                  src="images/portrait.png"
+                  alt="Emily Wong"
+                  width="720"
+                  height="720"
+                  decoding="async"
+                />
+              </div>
+            </figure>
+          </div>
+
+          <ul class="mono-tags mono-tags--interests">
+            <li>community building</li>
+            <li>Web3</li>
+            <li>brand partnerships</li>
+            <li>content strategy</li>
+            <li>vibe coding</li>
+          </ul>
+
+        </div>
+      </section>
+
+      <section id="experience" class="mono-section section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-section__index">Experience</p>
+          <ul class="exp-list">
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">3Box Labs / Recall Foundation</span>
+                <span class="exp-row__title">Community Manager / Community Lead</span>
+                <span class="exp-row__period">12/2024 to 10/2025</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Grew community from 0 to 400K+ members</li>
+                  <li>Led global moderation and support team</li>
+                  <li>Used metrics and feedback to inform strategy and product decisions</li>
+                  <li>Managed community through the Textile acquisition into Recall</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">WerqAI</span>
+                <span class="exp-row__title">Community Lead</span>
+                <span class="exp-row__period">09/2024 to 12/2024</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Community lead overseeing programs, activations, and member engagement</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">SFT Studios</span>
+                <span class="exp-row__title">Marketing Coordinator</span>
+                <span class="exp-row__period">05/2024 to 07/2024</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Organized promotional activities for new products, services, and updates</li>
+                  <li>Created, proofread, and edited copy for various marketing channels, ensuring consistent voice</li>
+                  <li>Drafted designs for content materials including mood boards, concept art, and overall aesthetic for the brand identity online</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">Phantom Network/PNHQ</span>
+                <span class="exp-row__title">Marketing Lead / BD Manager / Community Lead</span>
+                <span class="exp-row__period">12/2021 to 05/2024</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Managed 5-6 figure budgets on multi-channel marketing campaigns to drive brand awareness, generate leads, and increase revenue</li>
+                  <li>Led the development and execution across all channels including digital, traditional, and emerging platforms</li>
+                  <li>Exceeded business partnership KPIs by 233% with 3 months consistency</li>
+                  <li>Built strategic relationships and secured exclusive agreements with top-tier leaders (C-Level Executives and Founders) at multi-million dollar businesses, resulting in substantial revenue boosts and enhanced company value</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">SoundMint Labs</span>
+                <span class="exp-row__title">Partnerships Marketing Manager</span>
+                <span class="exp-row__period">04/2022 to 06/2022</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Built and maintained a pipeline of new partnerships, securing deals with at least 2 partners per week and delivering customized marketing materials to support successful campaigns</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">Nectar Hard Seltzer</span>
+                <span class="exp-row__title">Customer Success</span>
+                <span class="exp-row__period">11/2021 to 03/2022</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Worked closely with the development team to gather customer feedback and insights, informing new product features and flavors that resonated with customers</li>
+                  <li>Implemented a bot that triggered an automatic response to a specific keyword or phrase, streamlining customer support and reducing response time by 50%</li>
+                  <li>Managed feedback and responses for email marketing campaigns</li>
+                </ul>
+              </div>
+            </li>
+            <li class="exp-row">
+              <button class="exp-row__head" type="button" aria-expanded="false">
+                <span class="exp-row__arrow">&#9662;</span>
+                <span class="exp-row__org">Kre8 Media</span>
+                <span class="exp-row__title">Experiential Growth Marketer</span>
+                <span class="exp-row__period">01/2019 to 03/2020</span>
+              </button>
+              <div class="exp-row__body" hidden>
+                <ul>
+                  <li>Experiential marketing campaigns and growth strategy</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="mono-section mono-section--alt section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-section__index">Projects</p>
+          <p class="mono-section__lead">
+            Click on a card for examples of my work.
+          </p>
+          <ul class="mono-featured">
+            <li class="mono-card">
+              <button
+                type="button"
+                class="mono-card__link"
+                data-project-modal="personal-vibe"
+                aria-haspopup="dialog"
+              >
+                <span class="mono-card__idx">Featured · Tap to watch</span>
+                <h3 class="mono-card__h">Personal Vibe Coded Projects</h3>
+                <p class="mono-card__meta">Personal · 2025</p>
+                <p class="mono-card__txt">
+                  Side projects built for fun and learning, exploring ideas through vibe coding.
+                </p>
+              </button>
+            </li>
+            <li class="mono-card">
+              <button
+                type="button"
+                class="mono-card__link"
+                data-project-modal="recall-merge"
+                aria-haspopup="dialog"
+              >
+                <span class="mono-card__idx">Featured · Tap to view</span>
+                <h3 class="mono-card__h">Recall Social Accounts</h3>
+                <p class="mono-card__meta">3Box Labs → Recall · 2024–2025</p>
+                <p class="mono-card__txt">
+                  Social accounts I contributed to and managed at Recall.
+                </p>
+              </button>
+            </li>
+            <li class="mono-card">
+              <button
+                type="button"
+                class="mono-card__link"
+                data-project-modal="pxn-growth"
+                aria-haspopup="dialog"
+              >
+                <span class="mono-card__idx">Featured · Tap to view</span>
+                <h3 class="mono-card__h">PNHQ: Marketing</h3>
+                <p class="mono-card__meta">Phantom Network/PNHQ · 2021–2024</p>
+                <p class="mono-card__txt">
+                  Social accounts I contributed to and managed at PNHQ.
+                </p>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="certificates" class="mono-section section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-section__index">Certificates</p>
+          <ul class="mono-certs">
+            <li class="mono-cert">
+              <h3 class="mono-cert__h">Google AI Professional Certificate</h3>
+              <p class="mono-cert__sub">Grow with Google · 2026</p>
+              <p class="mono-cert__txt">
+                Practical AI workflows with Gemini, NotebookLM, and related
+                tools, end to end from ideation to delivery.
+              </p>
+            </li>
+            <li class="mono-cert">
+              <h3 class="mono-cert__h">Google Ads Search Certification</h3>
+              <p class="mono-cert__sub">Google · Nov 2023</p>
+              <p class="mono-cert__txt">Search strategy and campaign execution.</p>
+            </li>
+            <li class="mono-cert">
+              <h3 class="mono-cert__h">Advanced Social Media Strategy</h3>
+              <p class="mono-cert__sub">HubSpot · Nov 2023</p>
+              <p class="mono-cert__txt">
+                Strategy, content systems, and platform-level planning.
+              </p>
+            </li>
+            <li class="mono-cert">
+              <h3 class="mono-cert__h">Advanced SEO</h3>
+              <p class="mono-cert__sub">Semrush · Aug 2023</p>
+              <p class="mono-cert__txt">
+                Keyword research, technical SEO, and on-page foundations.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="mono-section mono-section--alt section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap section-parallax__content">
+          <p class="mono-section__index">Skills</p>
+          <div class="mono-skills">
+            <div>
+              <h3 class="mono-skills__h">Professional</h3>
+              <ul class="mono-tags mono-tags--dense">
+                <li>digital marketing</li>
+                <li>community</li>
+                <li>content</li>
+                <li>business development</li>
+                <li>partnerships</li>
+                <li>multi-channel campaigns</li>
+                <li>brand</li>
+                <li>email</li>
+                <li>budgets</li>
+                <li>customer success</li>
+                <li>creative direction</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mono-skills__h">Languages</h3>
+              <ul class="mono-tags mono-tags--dense">
+                <li>English, native / bilingual</li>
+                <li>Chinese, elementary</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mono-section mono-contact section-anchor section-parallax">
+        <div class="section-parallax__bg" aria-hidden="true"></div>
+        <div class="wrap wrap--narrow section-parallax__content">
+          <p class="mono-section__index">Contact</p>
+          <h2 class="mono-section__title">Let’s connect</h2>
+          <p class="mono-contact__lede">
+            Community, marketing, partnerships, or Web3 facing roles, send a note
+            and I’ll get back to you.
+          </p>
+          <ul class="mono-contact__links">
+            <li>
+              <a href="mailto:mseggmily@gmail.com">mseggmily@gmail.com</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mseggmily"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin.com/in/mseggmily</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mono-footer">
+      <div class="wrap mono-footer__inner">
+        <p>© <span id="year"></span> Emily Wong · Los Angeles</p>
+      </div>
+    </footer>
+
+    <div
+      id="palette"
+      class="palette"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="palette-title"
+    >
+      <div class="palette__backdrop" data-palette-close></div>
+      <div class="palette__panel">
+        <p id="palette-title" class="visually-hidden">Jump to section</p>
+        <input
+          type="search"
+          class="palette__input"
+          id="palette-input"
+          placeholder="Jump to…"
+          autocomplete="off"
+          aria-controls="palette-list"
+        />
+        <ul class="palette__list" id="palette-list" role="listbox"></ul>
+        <p class="palette__hint">
+          <kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>↵</kbd> select ·
+          <kbd>esc</kbd> close
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="project-modal"
+      class="project-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-modal-title"
+    >
+      <div class="project-modal__backdrop" data-project-modal-close></div>
+      <div class="project-modal__panel">
+        <div class="project-modal__head">
+          <div>
+            <p class="project-modal__kicker" id="project-modal-subtitle"></p>
+            <h2 class="project-modal__title" id="project-modal-title"></h2>
+            <p class="project-modal__intro" id="project-modal-intro"></p>
+          </div>
+          <button
+            type="button"
+            class="project-modal__close"
+            data-project-modal-close
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+        <div class="project-modal__videos" id="project-modal-videos"></div>
+      </div>
+    </div>
+
+    <script src="main.js" defer></script>
+    <script>
+      window.addEventListener("beforeunload", function () {
+        window.scrollTo(0, 0);
+      });
+      window.addEventListener("load", function () {
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname);
+        }
+        window.scrollTo(0, 0);
+        setTimeout(function () { window.scrollTo(0, 0); }, 50);
+      });
+    </script>
+  </body>
+</html>
