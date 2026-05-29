@@ -12,6 +12,11 @@
       intro: "Side projects built for fun and learning.",
       videos: [
         {
+          title: "CommunityOS",
+          embed:
+            "https://community-os-git-main-mseggmily-s-projects.vercel.app",
+        },
+        {
           title: "Mini Game (Replit)",
           url: "https://x.com/MsEggmily/status/1915622815409328554?s=20",
         },
@@ -335,6 +340,35 @@
     return null;
   }
 
+  function getWebsiteEmbed(url) {
+    if (!url || typeof url !== "string") return null;
+    url = url.trim();
+    if (!/^https?:\/\//i.test(url)) return null;
+    if (isTwitterUrl(url)) return null;
+    if (normalizeVideoEmbed(url)) return null;
+    return { embed: url, watch: url };
+  }
+
+  function appendIframeEmbed(block, embedUrl, title, watchLabel) {
+    var wrap = document.createElement("div");
+    wrap.className = "project-modal__iframe-wrap";
+    var iframe = document.createElement("iframe");
+    iframe.src = embedUrl;
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+    );
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("loading", "lazy");
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.title = title || "Embedded preview";
+    wrap.appendChild(iframe);
+    block.appendChild(wrap);
+    if (watchLabel) {
+      appendWatchFallback(block, watchLabel, embedUrl);
+    }
+  }
+
   var twitterWidgetsPromise = null;
 
   function loadTwitterWidgets() {
@@ -372,6 +406,34 @@
     fallback.rel = "noopener noreferrer";
     fallback.textContent = label;
     block.appendChild(fallback);
+  }
+
+  function appendSiteCard(block, v, siteUrl) {
+    var card = document.createElement("div");
+    card.className = "project-modal__site-card";
+    var name = document.createElement("p");
+    name.className = "project-modal__site-card-name";
+    name.textContent = v.title || "Project";
+    card.appendChild(name);
+    if (v.description) {
+      var desc = document.createElement("p");
+      desc.className = "project-modal__site-card-desc";
+      desc.textContent = v.description;
+      card.appendChild(desc);
+    }
+    var open = document.createElement("a");
+    open.className = "project-modal__site-card-cta";
+    open.href = siteUrl;
+    open.target = "_blank";
+    open.rel = "noopener noreferrer";
+    open.textContent = "Open " + (v.title || "site") + " →";
+    card.appendChild(open);
+    var hint = document.createElement("p");
+    hint.className = "project-modal__site-card-hint";
+    hint.textContent =
+      "Live preview in this window needs Vercel deployment protection turned off and embed headers enabled on the CommunityOS project.";
+    card.appendChild(hint);
+    block.appendChild(card);
   }
 
   function appendTwitterEmbed(block, tweetUrl) {
@@ -465,6 +527,8 @@
         (isTwitterUrl(externalUrl) && externalUrl) ||
         "";
       var video = normalizeVideoEmbed(rawEmbed || externalUrl);
+      var website =
+        getWebsiteEmbed(rawEmbed) || getWebsiteEmbed(externalUrl);
 
       if (file) {
         var vwrap = document.createElement("div");
@@ -477,6 +541,8 @@
         vid.title = v.title || "Video " + (i + 1);
         vwrap.appendChild(vid);
         block.appendChild(vwrap);
+      } else if (v.siteCard && externalUrl) {
+        appendSiteCard(block, v, externalUrl);
       } else if (tweetUrl) {
         appendTwitterEmbed(block, tweetUrl);
       } else if (video && video.embed) {
@@ -484,21 +550,36 @@
           video.watch.indexOf("youtube") !== -1
             ? "Watch on YouTube if player does not load →"
             : "Watch on Vimeo if player does not load →";
-        var wrap = document.createElement("div");
-        wrap.className = "project-modal__iframe-wrap";
-        var iframe = document.createElement("iframe");
-        iframe.src = video.embed;
-        iframe.setAttribute(
-          "allow",
-          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        appendIframeEmbed(
+          block,
+          video.embed,
+          v.title || "Video " + (i + 1),
+          fallbackLabel
         );
-        iframe.setAttribute("allowfullscreen", "");
-        iframe.setAttribute("loading", "lazy");
-        iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-        iframe.title = v.title || "Video " + (i + 1);
-        wrap.appendChild(iframe);
-        block.appendChild(wrap);
-        appendWatchFallback(block, fallbackLabel, video.watch);
+      } else if (website) {
+        var siteWrap = document.createElement("div");
+        siteWrap.className =
+          "project-modal__iframe-wrap project-modal__iframe-wrap--site";
+        var siteFrame = document.createElement("iframe");
+        siteFrame.src = website.embed;
+        siteFrame.setAttribute(
+          "allow",
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+        );
+        siteFrame.setAttribute("allowfullscreen", "");
+        siteFrame.setAttribute("loading", "lazy");
+        siteFrame.setAttribute(
+          "referrerpolicy",
+          "strict-origin-when-cross-origin"
+        );
+        siteFrame.title = v.title || "Site preview";
+        siteWrap.appendChild(siteFrame);
+        block.appendChild(siteWrap);
+        appendWatchFallback(
+          block,
+          "Open site in a new tab if preview does not load →",
+          website.watch
+        );
       } else if (externalUrl) {
         var ext = document.createElement("a");
         ext.className = "project-modal__item-link";
