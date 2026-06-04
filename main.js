@@ -17,6 +17,10 @@
             "https://community-os-git-main-mseggmily-s-projects.vercel.app",
         },
         {
+          title: "TrendOS (Cursor)",
+          embed: "https://trend-os-2026.vercel.app/dashboard",
+        },
+        {
           title: "Mini Game (Replit)",
           url: "https://x.com/MsEggmily/status/1915622815409328554?s=20",
         },
