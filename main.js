@@ -8,7 +8,7 @@
   var PROJECT_SHOWCASE = {
     "personal-vibe": {
       title: "Personal Vibe Coded Projects",
-      subtitle: "Personal · 2025",
+      subtitle: "Personal · 2025-2026",
       intro: "Side projects built for fun and learning.",
       videos: [
         {
