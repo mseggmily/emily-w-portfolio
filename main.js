@@ -12,13 +12,17 @@
       intro: "Side projects built for fun and learning.",
       videos: [
         {
-          title: "CommunityOS",
+          title: "CommunityOS (Demo)(Cursor)",
           embed:
             "https://community-os-git-main-mseggmily-s-projects.vercel.app",
         },
         {
-          title: "TrendOS (Cursor)",
+          title: "TrendOS (Demo)(Cursor)",
           embed: "https://trend-os-2026.vercel.app/dashboard",
+        },
+        {
+          title: "PartnerFlow AI (Demo) (Cursor)",
+          embed: "https://partnerflow-ai.vercel.app/dashboard",
         },
         {
           title: "Mini Game (Replit)",
